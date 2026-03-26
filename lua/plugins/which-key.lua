@@ -25,8 +25,6 @@ return {
       { "<leader>q",  ":q!<cr>",                                            desc = "Quit" },
       { "<leader>x",  function() Snacks.bufdelete() end,                    desc = "Delete Buffer" },
       { "<leader>,",  function() Snacks.picker.buffers() end,               desc = "Buffers" },
-
-      { "<leader>d",  group = "debug",                                      mode = { "n", "x" } },
       { "<leader>g",  group = "git",                                        mode = { "n", "x" } },
 
       { "<leader>c",  group = "code",                                       mode = { "n", "x" } },
@@ -37,7 +35,6 @@ return {
       { "<leader>cq", ":lua vim.diagnostic.setqflist()<cr>",                desc = "Quickfix List" },
 
       { "<leader>u",  group = "ui", },
-      { "<leader>ul", ":terminal live-server<cr>",                          desc = "Live Server" },
       { "<leader>us", ":set spell!<cr>",                                    desc = "Toggle Spell" },
       { "<leader>uw", ":set wrap!<cr>",                                     desc = "Toggle Wrap" },
 

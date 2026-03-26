@@ -31,6 +31,12 @@ return {
   opts = {
     bigfile = { notify = false },
     image = { doc = { inline = false } },
+    styles = {
+      snacks_image = {
+        relative = "editor",
+        col = -1,
+      },
+    },
     input = { icon = "" },
     lazygit = { configure = false },
     terminal = {

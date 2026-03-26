@@ -4,7 +4,7 @@ return {
 	config = function()
 		local lualine = require("lualine")
 		local colors = {
-			bg = "#",
+			bg = "#011627",
 			fg = "#9399b1",
 			yellow = "#ffc777",
 			cyan = "#008080",
@@ -19,6 +19,10 @@ return {
 			options = {
 				component_separators = "",
 				section_separators = "",
+				theme = {
+					normal = { c = { fg = colors.fg, bg = colors.bg } },
+					inactive = { c = { fg = colors.fg, bg = colors.bg } },
+				},
 			},
 			sections = {
 				lualine_a = {},
