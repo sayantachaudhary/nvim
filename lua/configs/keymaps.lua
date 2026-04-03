@@ -1,7 +1,7 @@
 local function map(mode, lhs, rhs, opts)
-	opts = opts or {}
-	opts.silent = opts.silent ~= false
-	vim.keymap.set(mode, lhs, rhs, opts)
+  opts = opts or {}
+  opts.silent = opts.silent ~= false
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 vim.g.mapleader = " "
@@ -9,9 +9,6 @@ vim.g.maplocalleader = "\\"
 
 map("n", "<leader>/", "gcc", { remap = true, desc = "Toggle Comment" })
 map("x", "<leader>/", "gc", { remap = true, desc = "Toggle Comment" })
-
--- vim.cmd("packadd nvim.undotree")
--- vim.keymap.set("n", "<leader>uu", require("undotree").open, { desc = "Undo Tree" })
 
 -- Keep centered
 map("n", "<C-d>", "<C-d>zz")

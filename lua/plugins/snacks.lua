@@ -27,6 +27,7 @@ return {
     { "<leader>sW", function() Snacks.picker.grep_word() end,                            mode = { "n", "x" } },
     { "<leader>ss", function() Snacks.picker.lsp_symbols() end,                          desc = "Symbols" },
     { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end,                desc = "Workspace Symbols" },
+    -- { "<leader>sM", function() Snacks.picker.man() end,                                  desc = "Man Pages" },
     { "<C-/>",      function() Snacks.terminal() end,                                    desc = "Toggle Terminal" },
     { "<C-_>",      function() Snacks.terminal() end,                                    desc = "which_key_ignore" },
   },
