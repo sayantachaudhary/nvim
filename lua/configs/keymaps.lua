@@ -10,6 +10,9 @@ vim.g.maplocalleader = "\\"
 map("n", "<leader>/", "gcc", { remap = true, desc = "Toggle Comment" })
 map("x", "<leader>/", "gc", { remap = true, desc = "Toggle Comment" })
 
+-- vim.cmd("packadd nvim.undotree")
+-- vim.keymap.set("n", "<leader>uu", require("undotree").open, { desc = "Undo Tree" })
+
 -- Keep centered
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
@@ -22,36 +25,36 @@ map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
 -- Resize window
-map("n", "<C-Up>", ":resize -2<cr>")
-map("n", "<C-Down>", ":resize +2<cr>")
-map("n", "<C-Left>", ":vertical resize -2<cr>")
-map("n", "<C-Right>", ":vertical resize +2<cr>")
+map("n", "<C-Up>", "<Cmd>resize -2<CR>")
+map("n", "<C-Down>", "<Cmd>resize +2<CR>")
+map("n", "<C-Left>", "<Cmd>vertical resize -2<CR>")
+map("n", "<C-Right>", "<Cmd>vertical resize +2<CR>")
 
 -- Better indenting
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- Move lines
-map("n", "<A-j>", ":m .+1<cr>==")
-map("n", "<A-k>", ":m .-2<cr>==")
-map("i", "<A-j>", "<Esc>:m .+1<cr>==gi")
-map("i", "<A-k>", "<Esc>:m .-2<cr>==gi")
-map("x", "<A-j>", ":m '>+1<cr>gv=gv")
-map("x", "<A-k>", ":m '<-2<cr>gv=gv")
+map("n", "<A-j>", ":m .+1<CR>==")
+map("n", "<A-k>", ":m .-2<CR>==")
+map("i", "<A-j>", "<Esc>:m .+1<CR>==gi")
+map("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
+map("v", "<A-j>", ":m '>+1<CR>gv=gv")
+map("v", "<A-k>", ":m '<-2<CR>gv=gv")
 
 map("n", "d", '"_d')
 map("n", "x", '"_x')
 map("x", "p", [["_dP]])
-map({ "i", "n" }, "<Esc>", "<cmd>noh<cr><esc>", { desc = "Escape for Clear hlsearch" })
+map({ "i", "n" }, "<Esc>", "<Cmd>noh<CR><Esc>", { desc = "Escape for Clear hlsearch" })
 
 -- stylua: ignore start
 if vim.fn.executable("lazygit") == 1 then
   map("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
 end
 
--- Clone terminal
-map("t", "<C-/>", "<cmd>close<cr>")
-map("t", "<C-_>", "<cmd>close<cr>")
+-- Close terminal
+map("t", "<C-/>", "<Cmd>close<CR>")
+map("t", "<C-_>", "<Cmd>close<CR>")
 
 -- Better up/down on wrap
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })

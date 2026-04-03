@@ -16,15 +16,12 @@ o.scrolloff = 4
 o.sidescrolloff = 8
 o.undofile = true
 o.updatetime = 250
-o.foldmethod = "expr"
-o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 o.foldlevel = 99
 o.foldtext = ""
 o.fillchars = { foldopen = "", foldclose = "", fold = " ", foldsep = " ", diff = "╱", eob = " " }
 o.clipboard = "unnamedplus"
 o.shortmess:append("cC")
 o.whichwrap:append("<>[]hl")
-vim.g.markdown_recommended_style = 0
 
 -- disable some default providers
 for _, provider in ipairs({ "node", "perl", "python3", "ruby" }) do

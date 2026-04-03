@@ -3,10 +3,10 @@ return {
 	version = "*",
 	event = "VeryLazy",
 	keys = {
-		{ "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-		{ "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
-		{ "[B", "<cmd>BufferLineMovePrev<cr>", desc = "Move buffer to Left" },
-		{ "]B", "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer to Right" },
+		{ "<S-h>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev Buffer" },
+		{ "<S-l>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next Buffer" },
+		{ "[B", "<Cmd>BufferLineMovePrev<CR>", desc = "Move buffer to Left" },
+		{ "]B", "<Cmd>BufferLineMoveNext<CR>", desc = "Move buffer to Right" },
 	},
 	opts = {
 		options = {
