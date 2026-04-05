@@ -1,7 +1,7 @@
 local function map(mode, lhs, rhs, opts)
-  opts = opts or {}
-  opts.silent = opts.silent ~= false
-  vim.keymap.set(mode, lhs, rhs, opts)
+	opts = opts or {}
+	opts.silent = opts.silent ~= false
+	vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 vim.g.mapleader = " "
@@ -39,6 +39,7 @@ map("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
 map("v", "<A-j>", ":m '>+1<CR>gv=gv")
 map("v", "<A-k>", ":m '<-2<CR>gv=gv")
 
+-- QoL
 map("n", "d", '"_d')
 map("n", "x", '"_x')
 map("x", "p", [["_dP]])

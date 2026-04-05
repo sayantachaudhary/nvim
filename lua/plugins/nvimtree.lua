@@ -73,10 +73,8 @@ return {
 					glyphs = {
 						default = "",
 						symlink = "󰌷",
-						bookmark = "",
+						bookmark = "",
 						folder = {
-							-- arrow_closed = "",
-							-- arrow_open = "",
 							arrow_closed = "›",
 							arrow_open = "⌄",
 							default = "",

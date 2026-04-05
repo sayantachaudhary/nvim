@@ -1,9 +1,9 @@
 return {
-	"mason-org/mason-lspconfig.nvim",
+	"neovim/nvim-lspconfig",
 	event = { "BufReadPost", "BufNewFile" },
 	dependencies = {
 		{ "mason-org/mason.nvim", opts = {} },
-		"neovim/nvim-lspconfig",
+		"mason-org/mason-lspconfig.nvim",
 	},
 	config = function()
     -- stylua: ignore
@@ -36,15 +36,6 @@ return {
 							checkThirdParty = false,
 							library = vim.api.nvim_get_runtime_file("", true),
 						},
-					},
-				},
-			},
-
-			jsonls = {
-				settings = {
-					json = {
-						format = { enable = true },
-						validate = { enable = true },
 					},
 				},
 			},
