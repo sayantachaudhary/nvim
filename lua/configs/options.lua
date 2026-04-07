@@ -1,5 +1,6 @@
 local o = vim.opt
 o.expandtab = true
+o.breakindent = true
 o.tabstop = 2
 o.shiftwidth = 2
 o.ignorecase = true
@@ -20,7 +21,7 @@ o.foldlevel = 99
 o.foldtext = ""
 o.fillchars = { foldopen = "", foldclose = "", fold = " ", foldsep = " ", diff = "╱", eob = " " }
 o.clipboard = "unnamedplus"
-o.shortmess:append("cC")
+o.shortmess:append("WcC")
 o.whichwrap:append("<>[]hl")
 
 -- Disable some default providers

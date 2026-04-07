@@ -23,8 +23,8 @@ require("lazy").setup({
 	ui = {
 		icons = {
 			cmd = "",
-			config = "",
-			favorite = "",
+			config = "",
+			favorite = "",
 			ft = "",
 			init = "",
 			import = "",

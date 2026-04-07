@@ -22,7 +22,7 @@ return {
     })
 
 		vim.diagnostic.config({
-			virtual_text = { source = "if_many", prefix = "▪" },
+			virtual_text = { prefix = "▪", source = "if_many" },
 			signs = false,
 			severity_sort = true,
 			float = { border = "rounded", source = "if_many" },
@@ -41,8 +41,8 @@ return {
 			},
 		}
 
-		for server, config in pairs(servers) do
-			vim.lsp.config(server, config)
+		for name, config in pairs(servers) do
+			vim.lsp.config(name, config)
 		end
 
 		require("mason-lspconfig").setup({

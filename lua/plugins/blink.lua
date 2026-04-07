@@ -1,6 +1,6 @@
 return {
 	"saghen/blink.cmp",
-  dependencies = { "rafamadriz/friendly-snippets" },
+	dependencies = { "rafamadriz/friendly-snippets" },
 	version = "1.*",
 	event = "VeryLazy",
 	opts = {
@@ -35,8 +35,8 @@ return {
 			},
 		},
 		completion = {
-			-- menu = { draw = { treesitter = { "lsp" } } },
-			documentation = { auto_show = true, auto_show_delay_ms = 500 },
+			menu = { draw = { treesitter = { "lsp" } } },
+			documentation = { auto_show = true },
 		},
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },

@@ -1,7 +1,7 @@
-local function map(mode, lhs, rhs, opts)
+local function map(mode, l, r, opts)
 	opts = opts or {}
 	opts.silent = opts.silent ~= false
-	vim.keymap.set(mode, lhs, rhs, opts)
+	vim.keymap.set(mode, l, r, opts)
 end
 
 vim.g.mapleader = " "
@@ -15,15 +15,15 @@ map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 map("n", "J", "mzJ`z")
 
--- Switch window
+-- Window switch
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
--- Resize window
-map("n", "<C-Up>", "<Cmd>resize -2<CR>")
-map("n", "<C-Down>", "<Cmd>resize +2<CR>")
+-- Window resize
+map("n", "<C-Up>", "<Cmd>resize +2<CR>")
+map("n", "<C-Down>", "<Cmd>resize -2<CR>")
 map("n", "<C-Left>", "<Cmd>vertical resize -2<CR>")
 map("n", "<C-Right>", "<Cmd>vertical resize +2<CR>")
 
@@ -42,8 +42,9 @@ map("v", "<A-k>", ":m '<-2<CR>gv=gv")
 -- QoL
 map("n", "d", '"_d')
 map("n", "x", '"_x')
-map("x", "p", [["_dP]])
-map({ "i", "n" }, "<Esc>", "<Cmd>noh<CR><Esc>", { desc = "Escape for Clear hlsearch" })
+map("v", "p", '"_dP')
+
+map({ "i", "n" }, "<Esc>", "<Cmd>noh<CR><Esc>")
 
 -- stylua: ignore start
 if vim.fn.executable("lazygit") == 1 then
