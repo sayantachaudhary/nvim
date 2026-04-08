@@ -1,9 +1,4 @@
-local function root_dir()
-	local file = vim.api.nvim_buf_get_name(0)
-	local dir = file ~= "" and vim.fs.dirname(file) or vim.uv.cwd()
-	local root = vim.fs.find({ ".git", "package.json" }, { upward = true, path = dir })[1]
-	return root and vim.fs.dirname(root) or dir
-end
+local root_dir = require("utils.root")
 
 return {
 	"nvim-tree/nvim-tree.lua",
@@ -12,19 +7,14 @@ return {
 		{
 			"<leader>e",
 			function()
-				vim.cmd("cd " .. root_dir())
-				vim.cmd("NvimTreeToggle")
+				require("nvim-tree.api").tree.toggle({ path = root_dir() })
 			end,
 			desc = "Explorer",
 		},
 		{
 			"<leader>E",
 			function()
-				local cwd = vim.fn.expand("%:p:h")
-				if cwd ~= "" then
-					vim.cmd("cd " .. cwd)
-				end
-				vim.cmd("NvimTreeToggle")
+				require("nvim-tree.api").tree.toggle({ path = vim.fn.expand("%:p:h") })
 			end,
 		},
 	},
