@@ -16,13 +16,13 @@ return {
 		end,
 	},
 
-	-- {
-	-- 	"nvim-mini/mini.pairs",
-	-- 	event = "VeryLazy",
-	-- 	opts = {
-	-- 		modes = { insert = true, command = true },
-	-- 	},
-	-- },
+	{
+		"nvim-mini/mini.pairs",
+		event = "VeryLazy",
+		opts = {
+			modes = { insert = true, command = true },
+		},
+	},
 
 	-- {
 	-- 	"christoomey/vim-tmux-navigator",

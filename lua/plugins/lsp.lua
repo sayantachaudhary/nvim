@@ -25,7 +25,22 @@ return {
 			virtual_text = { prefix = "▪", source = "if_many" },
 			signs = false,
 			severity_sort = true,
-			float = { border = "rounded", source = "if_many" },
+			float = {
+				border = "rounded",
+				source = "if_many",
+				header = "",
+				prefix = "",
+			},
+
+			jump = {
+				on_jump = function(_, bufnr)
+					vim.diagnostic.open_float({
+						bufnr = bufnr,
+						scope = "cursor",
+						focus = false,
+					})
+				end,
+			},
 		})
 
 		local servers = {
