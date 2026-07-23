@@ -49,7 +49,7 @@ local function root_dir()
 		ret = pattern and vim.fs.dirname(pattern) or nil
 	end
 
-	-- cwd
+	-- CWD
 	ret = ret or vim.uv.cwd() or ""
 
 	-- Normalize

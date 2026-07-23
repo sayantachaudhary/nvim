@@ -23,10 +23,10 @@ return {
     -- stylua: ignore
     spec = {
       { "<leader>q",  ":q!<CR>",                              desc = "Quit" },
-      { "<leader>x",  function() Snacks.bufdelete() end,      desc = "Delete Buffer" },
-      { "<leader>,",  function() Snacks.picker.buffers() end, desc = "Buffers" },
       { "<leader>g",  group = "git",                          mode = { "n", "x" } },
       { "<leader>s",  group = "search",                       mode = { "n", "x" } },
+      { "<leader>b",  function() Snacks.picker.buffers() end, desc = "Buffers" },
+      { "<leader>x",  function() Snacks.bufdelete() end,      desc = "Delete Buffer" },
 
       { "<leader>c",  group = "code",                         mode = { "n", "x" } },
       { "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>",   desc = "Code Action" },

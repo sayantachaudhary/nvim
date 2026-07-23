@@ -16,8 +16,6 @@ return {
 		end,
 	},
 
-	-- { "ojroques/nvim-osc52" },
-
 	{
 		"nvim-mini/mini.pairs",
 		event = "VeryLazy",
