@@ -3,6 +3,7 @@ return {
 	event = "VeryLazy",
 	config = function()
 		local lualine = require("lualine")
+
 		local colors = {
 			bg = "#011627",
 			fg = "#9399b1",
@@ -19,10 +20,6 @@ return {
 			options = {
 				component_separators = "",
 				section_separators = "",
-				theme = {
-					normal = { c = { fg = colors.fg, bg = colors.bg } },
-					inactive = { c = { fg = colors.fg, bg = colors.bg } },
-				},
 			},
 			sections = {
 				lualine_a = {},
@@ -60,17 +57,11 @@ return {
 						padding = { right = 1 },
 					},
 					{ "location" },
-					{
-						"diagnostics",
-						symbols = { error = " ", warn = " ", info = " ", hint = " " },
-					},
+					{ "diagnostics", symbols = { error = " ", warn = " ", info = " ", hint = " " } },
 				},
 				lualine_x = {
 					{ "branch", icon = "" },
-					{
-						"diff",
-						symbols = { added = "⊠ ", modified = "⊡ ", removed = "⊟ " },
-					},
+					{ "diff", symbols = { added = "⊠ ", modified = "⊡ ", removed = "⊟ " } },
 				},
 				lualine_y = {},
 				lualine_z = {},

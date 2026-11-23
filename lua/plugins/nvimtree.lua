@@ -2,7 +2,7 @@ local root_dir = require("utils.root")
 
 return {
 	"nvim-tree/nvim-tree.lua",
-	version = "*",
+	version = "v1.18.0",
 	keys = {
 		{
 			"<leader>e",
