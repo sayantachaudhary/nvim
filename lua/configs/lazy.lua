@@ -30,7 +30,6 @@ require("lazy").setup({
 			import = "",
 			keys = "",
 			source = "",
-			start = "",
 			task = "",
 			list = { "", "", "", "—" },
 		},
